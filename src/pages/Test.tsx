@@ -37,7 +37,7 @@ export default function Test() {
   const [timer, setTimer] = useState(0);
   const [userExplanation, setUserExplanation] = useState("");
   const [isRecording, setIsRecording] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout>();
+  const timerRef = useRef<ReturnType<typeof setInterval>>();
   const questionStartRef = useRef(Date.now());
   const recognitionRef = useRef<any>(null);
 
